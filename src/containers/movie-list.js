@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { selectMovie } from '../actions/index';
+import { bindActionCreators } from 'redux';
 
 class MovieList extends Component {
     renderList() {
@@ -23,6 +25,10 @@ function mapStateToProps(state) {
     return {
         movies: state.movies
     };
+}
+
+function mapDispatchToProps(dispatch) {
+ return bindActionCreators({ selectMovie: selectMovie}, dispatch)
 }
 
 export default connect(mapStateToProps)(MovieList);
