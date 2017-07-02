@@ -31,4 +31,4 @@ function mapDispatchToProps(dispatch) {
  return bindActionCreators({ selectMovie: selectMovie}, dispatch)
 }
 
-export default connect(mapStateToProps)(MovieList);
+export default connect(mapStateToProps, mapDispatchToProps())(MovieList);
