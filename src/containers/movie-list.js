@@ -7,7 +7,12 @@ class MovieList extends Component {
     renderList() {
         return this.props.movies.map((movie) => {
             return(
-                <li key={movie.title} className="list-group-item">{movie.title}</li>
+                <li
+                    key={movie.title}
+                    onClick={() => this.props.selectMovie(movie)}
+                    className="list-group-item">
+                    {movie.title}
+                </li>
             );
         })
     }

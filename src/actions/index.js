@@ -1,5 +1,8 @@
 export function selectMovie(movie) {
-    console.log('A movie has been selected: ', movie.title);
+    return {
+        type: 'MOVIE_SELECTED',
+        payload: movie
+    }
 }
 
 
