@@ -33,7 +33,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
- return bindActionCreators({ selectMovie: selectMovie}, dispatch)
+ return bindActionCreators({ selectMovie: selectMovie}, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps())(MovieList);
+export default connect(mapStateToProps, mapDispatchToProps)(MovieList);

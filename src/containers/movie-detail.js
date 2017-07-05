@@ -3,8 +3,16 @@ import { connect } from 'react-redux';
 
 class MovieDetail extends Component {
     render() {
+        if(!this.props.movie) {
+            return <div>Select a movie.</div>
+        }
+
         return(
-            <div>Movie Detail</div>
+            <div>
+                <h3>Details for:</h3>
+                <div>{this.props.movie.title}</div>
+                <div>Length: {this.props.movie.length}</div>
+            </div>
         );
     }
 }
