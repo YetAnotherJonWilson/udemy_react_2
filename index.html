@@ -5,9 +5,33 @@
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/48938155eb24b4ccdde09426066869504c6dab3c/dist/css/bootstrap.min.css">
     <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   </head>
   <body>
     <div class="container"></div>
+  <div id="testing">
+
+    <div class="intoForest">
+      <ul>
+
+      </ul>
+    </div>
+  </div>
   </body>
   <script src="/bundle.js"></script>
+  <script>
+      var intoForest = $.get('http://www.omdbapi.com/?t=Into%20The%20Forest&y=&plot=short&r=json');
+
+      intoForest.then(function(data) {
+          var intoForestPoster = data.Poster;
+          var $intoForestMoviePoster = $('<li><img src="' + intoForestPoster + '"</img></li>');
+          $('.intoForest').children().last().append($intoForestMoviePoster);
+          var intoForestTitle = data.Title;
+          var $intoForestMovieTitle = $('<li>' + intoForestTitle + '</li>');
+          $('.intoForest').children().last().append($intoForestMovieTitle);
+          var intoForestYear = data.Year;
+          var $intoForestMovieYear = $('<li>' + intoForestYear + '</li>');
+          $('.intoForest').children().last().append($intoForestMovieYear);
+      });
+  </script>
 </html>
