@@ -1,3 +1,5 @@
+### A simple React app built from a starter app (ReduxSimpleStarter by Stephen Grider--info below) by following along with a course on Udemy--original Readme of the starter app is below.
+
 # ReduxSimpleStarter
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
